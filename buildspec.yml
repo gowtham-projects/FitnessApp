@@ -1,0 +1,26 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Install phase - nothing to install for static HTML/CSS/JS site"
+
+  pre_build:
+    commands:
+      - echo "Pre-build phase - no actions needed"
+
+  build:
+    commands:
+      - echo "Build phase - no compilation required for static site"
+      - echo "Listing project files..."
+      - ls -R
+
+  post_build:
+    commands:
+      - echo "Build completed successfully on `date`"
+
+artifacts:
+  base-directory: Fitness
+  files:
+    - '**/*'
+  discard-paths: no
